@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0b0e">
+    <title>Inventario</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Acceso con PIN -->
+    <section id="login" class="screen">
+        <h1>Inventario</h1>
+        <input id="nom" class="lbl" type="text" maxlength="30" autocomplete="username" autocapitalize="none" placeholder="USUARIO" aria-label="Usuario">
+        <p id="loginMsg">Ingresa tu PIN de 4 dígitos</p>
+        <input id="pin" class="pin" type="password" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="••••" aria-label="PIN">
+        <input id="pin2" class="pin lbl" type="password" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="REPETIR PIN" aria-label="Confirmar PIN" hidden>
+        <button id="go" class="btn">Entrar</button>
+    </section>
+
+    <!-- Panel principal -->
+    <section id="main" class="screen" hidden>
+        <header>
+            <h2 id="who"></h2>
+            <div>
+                <button id="bTags" class="ghost">Etiquetas</button>
+                <button id="bPdf" class="ghost">Catálogo PDF</button>
+                <button id="bOut" class="ghost">Salir</button>
+            </div>
+        </header>
+        <div class="bar">
+            <input id="q" type="search" placeholder="Buscar producto" aria-label="Buscar">
+            <button id="fTag" class="fld"></button>
+            <button id="fEst" class="fld"></button>
+        </div>
+        <div id="grid" class="grid"></div>
+        <button id="add" class="fab" aria-label="Nuevo producto">+</button>
+        <div id="saveBar" hidden>
+            <span id="pend"></span>
+            <button id="undo" class="ghost">Cancelar</button>
+            <button id="save" class="btn">Guardar cambios</button>
+        </div>
+    </section>
+
+    <dialog id="dlg"></dialog>
+    <dialog id="pk"></dialog>
+    <div id="toast" role="status"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

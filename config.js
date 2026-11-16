@@ -1,0 +1,2 @@
+// Pega aquí la URL /exec de tu Web App de Apps Script. Este archivo no se vuelve a modificar.
+const API = 'https://script.google.com/macros/s/AKfycbxhMcuM-33GEz1hglvfGpVuA8DZ1ms3abWvXsBQTwshpMFk2ZI2r41JTBUg1MUSazbP/exec';
